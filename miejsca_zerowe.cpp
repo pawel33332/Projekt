@@ -70,7 +70,7 @@ int main()
 
 		}
 		else {
-			cout<<"Funkcja nie ma miejsc zerowych"<<endl;
+			cout<<"Funkcja nie ma miejsc zerowych "<<endl;
 		}
 	}	
 	}
