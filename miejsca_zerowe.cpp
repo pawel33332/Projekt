@@ -1,29 +1,34 @@
 #include <iostream>
-
+#include <cmath>
 using namespace std;
 
 
 int main()
 {
-	double a, b;
+	double a, b,c ;
 	cout<<"Podaj wspolczynnik a: ";
 	cin>>a;
-	cout<<"Podaj wyraz b: ";
+	cout<<"Podaj wspolczynnik b: ";
 	cin>>b;
-	if(a!=0)
+	cout<<"Podaj wspolczynnik c: ";
+	cin>>c;
+
+    double delta=pow(b,2)-(4*a*c);
+    if(delta>0)
+    {
+    	double x1=(-b-sqrt(delta))/(2*a);
+    	double x2=(-b+sqrt(delta))/(2*a);
+    	cout<<"Miejsca zerowe wynosza "<<x1<<" oraz "<<x2<<endl;
+	}
+	else if(delta==0)
 	{
-		cout<<"Miejsce zerowe funkcji wynosi: "<<-b/a<<endl;
+		double x0=(-b)/(2*a);
+		cout<<"Miejsce zerowe wynosi "<<x0<<endl;
 	}
 	else {
-		if(b==0)
-		{
-		cout<<"Funkcja ma nieskonczenie wiele miejsc zerowych"<<endl;
-	
-		}
-		else {
-			cout<<"Funkcja nie ma miejsc zerowych"<<endl;
-		}
+		cout<<"Nie ma miejsc zerowych"<<endl;
 	}
+	
 	
 	
 }
