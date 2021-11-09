@@ -13,7 +13,21 @@ int main()
 	cout<<"Podaj wspolczynnik c: ";
 	cin>>c;
 
-    double delta=pow(b,2)-(4*a*c);
+    
+    if(a==0)
+    {
+    	if(b==0)
+    	{
+    		if(c==0)
+    		{
+    			cout<<"Nieskonczenie wiele miejsc zerowych"<<endl;
+			}
+			cout<<"Brak miejsc zerowych"<<endl;
+		}
+		cout<<"Miejsce zerowe x0 wynosi "<<(-c)/b<<endl;
+	} else {
+	
+	double delta=pow(b,2)-(4*a*c);
     if(delta>0)
     {
     	double x1=(-b-sqrt(delta))/(2*a);
@@ -28,7 +42,7 @@ int main()
 	else {
 		cout<<"Nie ma miejsc zerowych"<<endl;
 	}
-	
+}
 	
 	
 }
